@@ -1,0 +1,21 @@
+import matplotlib.pyplot as plt
+
+# Data
+months = ["Jan 2024", "Feb 2024", "Mar 2024"]
+inflation_rates = [64.9, 67.1, 68.5]
+
+# Plotting the graph
+plt.figure(figsize=(10, 5))
+plt.plot(months, inflation_rates, marker='o', linestyle='-', color='b')
+
+# Adding titles and labels
+plt.title("Trend of Inflation Rate in Turkey till March 2024")
+plt.xlabel("Time (Months)")
+plt.ylabel("Inflation Rate (%)")
+
+# Display specific data points
+for i, txt in enumerate(inflation_rates):
+    plt.annotate(txt, (months[i], inflation_rates[i]), textcoords="offset points", xytext=(0,10), ha='center')
+
+# Show the graph
+plt.show()
